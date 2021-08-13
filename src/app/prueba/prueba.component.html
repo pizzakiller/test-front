@@ -1,0 +1,23 @@
+<h1>Listado de clientes</h1>
+<table datatable [dtOptions]="dtOptions" class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Cédula</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>Teléfono</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cli of clientes">
+      <td>{{ cli.id }}</td>
+      <td>{{ cli.n_document }}</td>
+      <td>{{ cli.first_name }}</td>
+      <td>{{ cli.last_name }}</td>
+      <td>{{ cli.email }}</td>
+      <td>{{ cli.phone_number }}</td>
+    </tr>
+  </tbody>
+</table>
